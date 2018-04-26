@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form id="form1" runat="server">
-        <h1>Hóa đơn chi tiết</h1>
+        <h1><p style="color:#9400D3">Hóa đơn chi tiết </p></h1>
     <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MaHoaDonCt" DataSourceID="SqlDataSource1">
         <EditItemTemplate>
 
