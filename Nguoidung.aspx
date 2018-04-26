@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form id="form1" runat="server">
         <h1>Người dùng</h1>
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaTaiKhoan" DataSourceID="SqlDataSource1" AllowPaging="True">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaTaiKhoan" DataSourceID="SqlDataSource1" AllowPaging="True" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" GridLines="Both">
         <EditItemTemplate>
 
              <div class="form-group">
@@ -40,6 +40,9 @@
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
+        <EditRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+        <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
+        <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
         <InsertItemTemplate>
 
             <div class="form-group">
@@ -113,6 +116,8 @@
 
 
         </ItemTemplate>
+        <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
+        <RowStyle BackColor="White" ForeColor="#003399" />
         </asp:FormView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [TaiKhoan] WHERE [MaTaiKhoan] = @MaTaiKhoan" InsertCommand="INSERT INTO [TaiKhoan] ([MaTaiKhoan], [MatKhau], [HoTen], [GioiTinh], [DiaChi], [ChucVu]) VALUES (@MaTaiKhoan, @MatKhau, @HoTen, @GioiTinh, @DiaChi, @ChucVu)" SelectCommand="SELECT [MaTaiKhoan], [MatKhau], [HoTen], [GioiTinh], [DiaChi], [ChucVu] FROM [TaiKhoan]" UpdateCommand="UPDATE [TaiKhoan] SET [MatKhau] = @MatKhau, [HoTen] = @HoTen, [GioiTinh] = @GioiTinh, [DiaChi] = @DiaChi, [ChucVu] = @ChucVu WHERE [MaTaiKhoan] = @MaTaiKhoan">
             <DeleteParameters>
