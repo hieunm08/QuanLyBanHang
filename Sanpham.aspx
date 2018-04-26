@@ -4,7 +4,7 @@
     <form id="form1" runat="server">
     <h1>Loại sản phẩm</h1><hr />
 
-        <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MaLoai" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" GridLines="Both">
+        <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MaLoai" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333">
             <EditItemTemplate>
 
                  <div class="form-group">
@@ -21,9 +21,8 @@
                 <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </EditItemTemplate>
-            <EditRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
-            <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
-            <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
+            <FooterStyle BackColor="#990000" ForeColor="White" Font-Bold="True" />
+            <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
             <InsertItemTemplate>
 
                       <div class="form-group">
@@ -70,8 +69,8 @@
                 
                
             </ItemTemplate>
-            <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
-            <RowStyle BackColor="White" ForeColor="#003399" />
+            <PagerStyle BackColor="red" ForeColor="#333333" HorizontalAlign="Center" />
+            <RowStyle BackColor="red" ForeColor="#333333" />
         </asp:FormView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [LoaiSanPham] WHERE [MaLoai] = @MaLoai" InsertCommand="INSERT INTO [LoaiSanPham] ([MaLoai], [TenLoai]) VALUES (@MaLoai, @TenLoai)" SelectCommand="SELECT [MaLoai], [TenLoai] FROM [LoaiSanPham]" UpdateCommand="UPDATE [LoaiSanPham] SET [TenLoai] = @TenLoai WHERE [MaLoai] = @MaLoai">
             <DeleteParameters>
