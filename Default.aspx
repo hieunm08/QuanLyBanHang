@@ -3,6 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form id="form1" runat="server">
         <h1>Sản phẩm</h1>
+        <style>
+            h1 {
+                color:#4cff00;
+            }
+        </style>
         <hr />
         <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MaSanPham" DataSourceID="SqlDataSource1">
             <EditItemTemplate>
